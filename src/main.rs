@@ -3,7 +3,7 @@ use anyhow::Result;
 use bioparser::{parse_bam, parse_sam, parse_vcf};
 
 #[derive(Parser)]
-#[command(name = "BioParseR", about = "A fast Rust parser for BAM, SAM, and VCF files.")]
+#[command(name = "BioParseR Pre-Release by mikeph_ 2025", about = "A fast parser for BAM, SAM, and VCF files, written in Rust.")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -17,6 +17,8 @@ enum Commands {
 }
 
 fn main() -> Result<()> {
+    println!("BioParseR Pre-Release by mikeph_ 2025");
+    println!("-------------------------------------");
     let cli = Cli::parse();
 
     match cli.command {

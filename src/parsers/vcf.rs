@@ -1,10 +1,11 @@
 use anyhow::Result;
-use noodles::vcf::{self, reader::Reader};
-use std::fs::File;
+use noodles_vcf as vcf;
+use std::{fs::File, io::BufReader};
 
 pub fn parse_vcf(path: &str) -> Result<()> {
     let file = File::open(path)?;
-    let mut reader = Reader::new(file);
+    let buf_reader = BufReader::new(file);
+    let mut reader = vcf::Reader::new(buf_reader);
 
     let header = reader.read_header()?;
     println!("VCF Header: {:?}", header.file_format());
