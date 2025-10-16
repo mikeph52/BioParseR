@@ -9,6 +9,8 @@
 - View basic header information and the first few records  
 - Written in **Rust** for performance and safety  
 
+To test those features, use the files provided in the [examples](/examples/) folder. 
+
 ## 🦀 Installation
 
 ### Prerequisites
