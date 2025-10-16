@@ -13,7 +13,7 @@
 
 ### Prerequisites
 - [Rust](https://www.rust-lang.org/tools/install) (≥ 1.80)
-- Cargo package manager (comes with Rust)
+- [Cargo](https://doc.rust-lang.org/cargo/guide/index.html) (comes with Rust)
 - [noodles](https://github.com/zaeleus/noodles)
 
 ### Clone and build
